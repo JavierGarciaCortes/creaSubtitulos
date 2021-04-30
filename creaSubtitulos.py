@@ -2,6 +2,7 @@ import speech_recognition as sr
 from os import path
 from pydub import AudioSegment
 import moviepy.editor as mp
+from playsound import playsound
 import io
 import sys
 import os
@@ -12,18 +13,17 @@ def conversio(segons):
     minuts=int(segons/60)
     segons-=minuts*60
     return hores,minuts,segons
- 
 
 
 def dictat(nommp3):
-    # converteix arxiu donada com argument de mp3 a wav                                         
+    # convert mp3 file to wav                                         
     sound = AudioSegment.from_mp3(nommp3)
-    sound.export("sortida.wav", format="wav")
+    sound.export("temp.wav", format="wav")
 
-    # transcriure arxiu de audio                                                         
-    AUDIO_FILE = "sortida.wav"
+    # transcribe audio file                                                         
+    AUDIO_FILE = "temp.wav"
 
-    # utilitzar arxiu de audio com font de so                                        
+    # use the audio file as the audio source                                        
     r = sr.Recognizer()
     with sr.AudioFile(AUDIO_FILE) as source:
         audio = r.record(source)  # read the entire audio file                  
@@ -31,17 +31,16 @@ def dictat(nommp3):
         fitxer.write(sortida + "\n")
 
 
-#Partim mp3 de minut en minut la primera hora
 arxiu = sys.argv[1]
 s = 0
 i = 0
 
-
+# Extract the audio of the video
 clip = mp.VideoFileClip(arxiu)
 arxiu = arxiu[:len(arxiu)-4] + '.mp3'
 clip.audio.write_audiofile(arxiu[:len(arxiu)-4] + '.mp3')
 
-#Arxiu on es guarda el resultat
+# File where we save the transcription
 fitxer=io.open(arxiu[:len(arxiu)-4] + '.txt','a')
 
 try:
@@ -69,10 +68,4 @@ except:
     os.system(comandament)
     nomArxiu = arxiu[:len(arxiu)-4] + '.srt'
     os.rename(arxiu[:len(arxiu)-4] + '.txt', nomArxiu)
-
-
-# codi clau extret de https://pythonbasics.org/transcribe-audio/
-# modificat per joan masdemont fontas
-# 2º modificació per Javier García Cortés
-# us ----python creaSubtitulos.py nomVideo   idioma ------ on idioma pot ser es-ES , fr-FR.....
-
+    playsound("audio.mp3")
