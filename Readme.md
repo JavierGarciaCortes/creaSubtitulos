@@ -12,6 +12,7 @@ Requiere tener instalados:
 - Speech Recognition     `pip install SpeechRecognition`
 - pydub                  `pip install pydub`
 - moviepy                `pip install moviepy`
+- playsound              `pip install playsound`
 
 Tambien tendreis que tener en la misma carpeta los ficheros de [ffmpeg](https://www.ffmpeg.org/):
 - ffmpeg.exe
