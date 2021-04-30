@@ -13,16 +13,10 @@ Requiere tener instalados:
 - pydub                  `pip install pydub`
 - moviepy                `pip install moviepy`
 
-    Tambien tendreis que tener en la misma carpeta los ficheros de ffmpeg:
-    - ffmpeg.exe
-    - ffplay.exe
-    - ffprobe.exe
-
-
-
-
-
-
+Tambien tendreis que tener en la misma carpeta los ficheros de [ffmpeg](https://www.ffmpeg.org/):
+- ffmpeg.exe
+- ffplay.exe
+- ffprobe.exe
 
 
 
