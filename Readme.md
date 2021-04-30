@@ -28,6 +28,5 @@ ffmpeg-python       - pip install ffmpeg-python
 
 
 
-codi clau extret de https://pythonbasics.org/transcribe-audio/
-Codigo modificado de mp3totext.py  https://gist.github.com/nosemas/a7e01f629c0302539ae4ee0782e5a801
-Creado por Joan Masdemont Fontas
+
+Codigo modificado de mp3totext.py (https://gist.github.com/nosemas/a7e01f629c0302539ae4ee0782e5a801) Creado por Joan Masdemont Fontas
