@@ -60,7 +60,7 @@ try:
         i += 1      
 except:
     fitxer.close()
-    comandament='del {}'.format("sortida.wav")
+    comandament='del {}'.format("temp.wav")
     os.system(comandament)
     comandament='del {}'.format(nommp3)
     os.system(comandament)
