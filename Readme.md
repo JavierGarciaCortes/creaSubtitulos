@@ -1,5 +1,5 @@
-# CreaSubtitulos
-Este programa extrae el sonido de un video y lo convierte en subtitulos en intervalos de 10seg.
+## CreaSubtitulos
+Este programa extrae el sonido de un video y lo convierte en subtítulos en intervalos de 10 seg. No funciona para todos los videos, aun esta en desarollo.
 
 Uso:
     python creaSubtitulos.py nombreVideo idioma
@@ -9,10 +9,9 @@ Necesita conexion a internet para funcionar (SpeechRecognition). Todos los idiom
 https://cloud.google.com/speech-to-text/docs/languages
 
 Requiere:
-Speech Recognition  - pip install SpeechRecognition
-pydub               - pip install pydub
-moviepy             - pip install moviepy
-ffmpeg-python       - pip install ffmpeg-python
+- Speech Recognition     `pip install SpeechRecognition`
+- pydub                  `pip install pydub`
+- moviepy                `pip install moviepy`
 
 
 
@@ -29,4 +28,5 @@ ffmpeg-python       - pip install ffmpeg-python
 
 
 
-Codigo modificado de mp3totext.py (https://gist.github.com/nosemas/a7e01f629c0302539ae4ee0782e5a801) Creado por Joan Masdemont Fontas
+
+Projecto basado en [mp3totext.py](https://gist.github.com/nosemas/a7e01f629c0302539ae4ee0782e5a801) Creado por Joan Masdemont Fontas
