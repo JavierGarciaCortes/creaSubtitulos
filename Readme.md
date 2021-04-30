@@ -8,13 +8,15 @@ El formato del idioma tiene que ser: es-ES, ca-ES, en-GB, en-Us....
 Necesita conexion a internet para funcionar (SpeechRecognition). Todos los idiomas que detecta y sus codigos aparecen en el siguiente enlace:
 https://cloud.google.com/speech-to-text/docs/languages
 
-Requiere:
+Requiere tener instalados:
 - Speech Recognition     `pip install SpeechRecognition`
 - pydub                  `pip install pydub`
 - moviepy                `pip install moviepy`
 
-
-
+    Tambien tendreis que tener en la misma carpeta los ficheros de ffmpeg:
+    - ffmpeg.exe
+    - ffplay.exe
+    - ffprobe.exe
 
 
 
